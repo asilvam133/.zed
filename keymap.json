@@ -13,9 +13,16 @@
         }
     },
     {
-        "context": "Editor",
+        "context": "ProjectPanel",
         "bindings": {
-            // "j k": ["workspace::SendKeystrokes", "escape"]
+            "o": null,
+            "%": null,
+            "-": null,
+            "shift-d": null,
+            "shift-r": null,
+            "t": null,
+            "v": null,
+            "p": null
         }
     },
     {
@@ -35,6 +42,27 @@
             "ctrl-s": ["pane::ActivateItem", 3],
             "ctrl-right": "pane::ActivateNextItem",
             "ctrl-left": "pane::ActivatePrevItem"
+        }
+    },
+    {
+        // netrw compatibility
+        "context": "ProjectPanel && not_editing",
+        "use_layout_keys": true,
+        "bindings": {
+            "o": "project_panel::NewFile",
+            "shift-o": "project_panel::NewDirectory",
+            "-": "project_panel::ToggleFocus",
+            "h": "project_panel::CollapseSelectedEntry",
+            "j": "menu::SelectNext",
+            "k": "menu::SelectPrev",
+            "l": "project_panel::ExpandSelectedEntry",
+            "enter": "project_panel::OpenPermanent",
+            "d d": "project_panel::Delete",
+            "c c": "project_panel::Rename",
+            "x": "project_panel::RevealInFileManager",
+            "s": "project_panel::OpenWithSystem",
+            "shift-g": "menu::SelectLast",
+            "g g": "menu::SelectFirst"
         }
     },
     {
