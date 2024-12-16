@@ -38,6 +38,13 @@
         }
     },
     {
+        "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+        "bindings": {
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp"
+        }
+    },
+    {
         // normal mode only or no tabs opened
         "context": "(Editor && vim_mode == normal && !VimWaiting && !menu) || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
         "bindings": {
