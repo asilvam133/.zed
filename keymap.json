@@ -51,7 +51,7 @@
         "bindings": {
             "o": "project_panel::NewFile",
             "shift-o": "project_panel::NewDirectory",
-            "-": "project_panel::ToggleFocus",
+            "space |": "project_panel::ToggleFocus",
             "h": "project_panel::CollapseSelectedEntry",
             "j": "menu::SelectNext",
             "k": "menu::SelectPrev",
@@ -76,7 +76,7 @@
         // normal mode only or no tabs opened
         "context": "(Editor && vim_mode == normal && !VimWaiting && !menu) || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
         "bindings": {
-            "-": "workspace::ToggleLeftDock",
+            "space |": "project_panel::ToggleFocus",
             "ctrl-a ctrl-f": "projects::OpenRecent",
             "space f": "file_finder::Toggle",
             "space shift-x": "diagnostics::Deploy"
