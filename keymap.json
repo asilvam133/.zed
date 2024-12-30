@@ -62,7 +62,8 @@
             "x": "project_panel::RevealInFileManager",
             "s": "project_panel::OpenWithSystem",
             "shift-g": "menu::SelectLast",
-            "g g": "menu::SelectFirst"
+            "g g": "menu::SelectFirst",
+            "-": "workspace::ToggleLeftDock"
         }
     },
     {
@@ -77,6 +78,7 @@
         "context": "(Editor && vim_mode == normal && !VimWaiting && !menu) || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
         "bindings": {
             "space |": "project_panel::ToggleFocus",
+            "-": "workspace::ToggleLeftDock",
             "ctrl-a ctrl-f": "projects::OpenRecent",
             "space f": "file_finder::Toggle",
             "space shift-x": "diagnostics::Deploy"
