@@ -7,14 +7,9 @@
 // from the command palette.
 [
   {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space space": "file_finder::Toggle",
-    },
-  },
-  {
     "context": "Editor && VimControl && vim_mode == normal",
     "bindings": {
+      "space space": "file_finder::Toggle",
       "space c f": "editor::Format",
     },
   },
@@ -22,36 +17,31 @@
     "context": "Editor",
     "bindings": {
       "ctrl-alt-l": null,
-    },
-  },
-  {
-    "context": "Editor",
-    "bindings": {
       "ctrl-shift-i": null,
     },
   },
   {
     "context": "(Workspace)",
     "bindings": {
-      "ctrl-k ctrl-e": [
+      "ctrl-a e": [
         "tab_switcher::Toggle",
         {
-          "select_last": true
-        }
-      ]
-    }
+          "select_last": true,
+        },
+      ],
+    },
   },
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "ctrl-e": null
-    }
+      "ctrl-e": null,
+    },
   },
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "ctrl-e": null
-    }
+      "ctrl-e": null,
+    },
   },
   {
     "context": "Workspace",
@@ -59,39 +49,149 @@
       "ctrl-a ctrl-f": [
         "projects::OpenRecent",
         {
-          "create_new_window": false
-        }
-      ]
-    }
+          "create_new_window": false,
+        },
+      ],
+    },
   },
   {
-    "context": "Workspace",
+    "context": "Editor && VimControl && vim_mode == normal",
     "bindings": {
-      "space u t": "theme_selector::Toggle"
-    }
+      "space u t": "theme_selector::Toggle",
+    },
   },
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Editor && VimControl && vim_mode == normal",
     "bindings": {
-      "space u c": "workspace::ToggleCenteredLayout"
-    }
+      "space U": "workspace::ToggleCenteredLayout",
+    },
   },
   {
-    "context": "Pane",
+    "context": "Editor && VimControl && vim_mode == normal",
     "bindings": {
-      "space g g": "git_panel::ToggleFocus"
-    }
+      "space g g": "git_panel::ToggleFocus",
+    },
   },
   {
-    "context": "vim_mode == normal  && !menu",
+    "context": "Editor && VimControl && vim_mode == normal  && !menu",
     "bindings": {
-      "space /": "pane::DeploySearch"
-    }
+      "space /": "pane::DeploySearch",
+    },
   },
   {
     "context": "((Editor && VimControl) && vim_mode == visual)",
     "bindings": {
-      "space c f": "editor::FormatSelections"
-    }
-  }
+      "space c f": "editor::FormatSelections",
+    },
+  },
+  {
+    "context": "(VimControl && vim_mode == normal)",
+    "bindings": {
+      "space x": "diagnostics::Deploy",
+    },
+  },
+  {
+    "context": "VimControl && vim_mode == normal && !menu",
+    "bindings": {
+      "space c a": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space c": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space d": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space f": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space k": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space p": null,
+    },
+  },
+  {
+    "context": "(Editor && VimControl && (vim_mode == normal) && !menu)",
+    "bindings": {
+      "space c r": "editor::Rename",
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space r": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space s": null,
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space y": null,
+    },
+  },
+  {
+    "context": "vim_operator == helix_previous",
+    "bindings": {
+      "space": null,
+    },
+  },
+  {
+    "context": "vim_operator == helix_next",
+    "bindings": {
+      "space": null,
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space": null,
+    },
+  },
+  {
+    "bindings": {
+      "shift-escape": "workspace::ToggleZoom",
+    },
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "space a": null,
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && ! VimWaiting && ! menu",
+    "bindings": {
+      "ctrl-s +": ["pane::ActivateItem", 0],
+      "ctrl-s [": ["pane::ActivateItem", 1],
+      "ctrl-s {": ["pane::ActivateItem", 2],
+      "ctrl-s (": ["pane::ActivateItem", 3],
+      "ctrl-s &": ["pane::ActivateItem", 4],
+      "ctrl-k =": ["pane::ActivateItem", 5],
+      "ctrl-k )": ["pane::ActivateItem", 6],
+      "ctrl-k }": ["pane::ActivateItem", 7],
+      "ctrl-k ]": ["pane::ActivateItem", 8],
+      "ctrl-k *": ["pane::ActivateItem", 9],
+    },
+  },
 ]
