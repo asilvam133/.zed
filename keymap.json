@@ -21,17 +21,6 @@
     },
   },
   {
-    "context": "(Workspace)",
-    "bindings": {
-      "ctrl-a e": [
-        "tab_switcher::Toggle",
-        {
-          "select_last": true,
-        },
-      ],
-    },
-  },
-  {
     "context": "vim_mode == insert",
     "bindings": {
       "ctrl-e": null,
@@ -44,9 +33,9 @@
     },
   },
   {
-    "context": "Workspace",
+    "context": "Editor && VimControl",
     "bindings": {
-      "ctrl-a ctrl-f": [
+      "space f": [
         "projects::OpenRecent",
         {
           "create_new_window": false,
@@ -180,18 +169,32 @@
     },
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && ! VimWaiting && ! menu",
+    "context": "VimControl && (vim_mode == normal || vim_mode == visual) && ! VimWaiting && ! menu",
     "bindings": {
-      "ctrl-s +": ["pane::ActivateItem", 0],
-      "ctrl-s [": ["pane::ActivateItem", 1],
-      "ctrl-s {": ["pane::ActivateItem", 2],
-      "ctrl-s (": ["pane::ActivateItem", 3],
-      "ctrl-s &": ["pane::ActivateItem", 4],
-      "ctrl-k =": ["pane::ActivateItem", 5],
-      "ctrl-k )": ["pane::ActivateItem", 6],
-      "ctrl-k }": ["pane::ActivateItem", 7],
-      "ctrl-k ]": ["pane::ActivateItem", 8],
-      "ctrl-k *": ["pane::ActivateItem", 9],
+      "space +": ["pane::ActivateItem", 0],
+      "space [": ["pane::ActivateItem", 1],
+      "space {": ["pane::ActivateItem", 2],
+      "space (": ["pane::ActivateItem", 3],
+      "space &": ["pane::ActivateItem", 4],
+      "space =": ["pane::ActivateItem", 5],
+      "space )": ["pane::ActivateItem", 6],
+      "space }": ["pane::ActivateItem", 7],
+      "space ]": ["pane::ActivateItem", 8],
+      "space *": ["pane::ActivateItem", 9],
     },
   },
+  {
+    "context": "VimControl && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space p": ["workspace::SendKeystrokes", "\" * p"],
+      "space P": ["workspace::SendKeystrokes", "\" * P"],
+      "space y": ["workspace::SendKeystrokes", "\" * y"] 
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-a": null
+    }
+  }
 ]
